@@ -29,6 +29,7 @@ const View = ({
             type="text"
             onChange={handleRoomId}
             placeholder="Enter Room Id"
+            inputMode="numeric"
           />
         </div>
         <Button
