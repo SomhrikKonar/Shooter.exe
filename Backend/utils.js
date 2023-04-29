@@ -1,3 +1,5 @@
+import uuid from "node-uuid";
+
 export const create_random_six_digit_code = (existingLobbyIds) => {
   const id = ("" + Math.random()).substring(2, 8);
   if (existingLobbyIds.has(id)) create_random_six_digit_code(existingLobbyIds);

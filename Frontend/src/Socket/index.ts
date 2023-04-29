@@ -9,11 +9,12 @@ import {
 import { NavigateFunction } from "react-router-dom";
 import { updateTarget } from "../Store/Reducers/targets";
 import { notify } from "../Toast/toast";
+import { url } from "./url";
 
-export const IO: Socket<ServerToClientEvents, ClientToServerEvents> = io(
-  "http://localhost:5001",
-  { secure: true, reconnection: false }
-);
+export const IO: Socket<ServerToClientEvents, ClientToServerEvents> = io(url, {
+  secure: true,
+  reconnection: false,
+});
 
 // temporarily disable;
 IO.disconnect();

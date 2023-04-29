@@ -12,6 +12,7 @@
   "author": "Somhrik",
   "license": "ISC",
   "dependencies": {
+    "node-uuid": "^1.4.8",
     "socket.io": "^4.6.1"
   },
   "devDependencies": {
