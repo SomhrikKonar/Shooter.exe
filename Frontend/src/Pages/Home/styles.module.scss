@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &::before{
+        content: "";
+        display: block;
+        position: fixed;
+        z-index: -1;
+        inset: 0;
+        background: #485563;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #29323c, #485563);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #29323c, #485563);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .header{
+        font-size: clamp(50px,12.5vw,120px);
+        color: rgb(241, 241, 241);
+        margin-bottom: 40px;
+        margin-top: -40px;
+    }    
+}

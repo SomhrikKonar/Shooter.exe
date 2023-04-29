@@ -1,0 +1,21 @@
+.container {
+    cursor: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .navbarContainer {
+        position: relative;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-inline: 20px;
+    }
+    &::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-color:#005b96;
+        z-index: -1;
+    }
+}

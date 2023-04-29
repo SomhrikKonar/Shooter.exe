@@ -1,0 +1,132 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+     &::before{
+        content: "";
+        display: block;
+        position: fixed;
+        z-index: -1;
+        inset: 0;
+        background: #485563;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #29323c, #485563);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #29323c, #485563);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .goBack {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        .icon {
+            margin-right: 5px;
+            transform: rotate(180deg)
+        }
+    }
+    .header {
+        font-size: clamp(50px, 12.5vw, 120px);
+        color: rgb(241, 241, 241);
+        margin-bottom: 20px;
+        margin-top: -40px;
+    }
+    .roomId{
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        .colon {
+            margin-left: 5px;
+        }
+        p{
+            display: flex;
+            align-items: center;
+            font-size: clamp(30px, 5vw, 40px);
+            color: #fff;
+            margin-block: 0;
+            &:last-child{
+                margin-left: 15px;
+            }
+        }
+    }
+    .gameSettings{
+        width: clamp(320px,90vw,500px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        p{
+            margin-right: auto;
+            font-weight:400;
+            font-size: clamp(30px, 5vw, 40px);
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .settingsContainer{
+            padding-left: 15px;
+            .field{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+                p{
+                    flex: 1;
+                    font-weight: 400;
+                    font-size: 22px;
+                    color: #fff;
+                    margin-block:0;
+                    margin-right: 15px;
+                    white-space: nowrap;
+                    margin-bottom: 10px;
+                }
+                .optionsContainer{
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    .option{
+                        width: 55px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-inline: 20px;
+                        label{
+                            color: #fff;
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+                        input{
+                            height: 18px;
+                            width: 18px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .warning{
+        font-size: 15px;
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-inline: 20px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:"650px") {
+    .container {
+        .header {
+            margin-top: 0px;
+        }
+    }
+}

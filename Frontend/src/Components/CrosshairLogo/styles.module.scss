@@ -1,0 +1,28 @@
+.crosshair{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    pointer-events: none;
+    .horizontal,.vertical{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .horizontal{
+        width: 100%;
+    }
+    .vertical{
+        height: 100%;
+        flex-direction: column;   
+    }
+}
+@media screen and (max-width:650px) {
+    .crosshair{
+        display: none;
+    }
+}
