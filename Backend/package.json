@@ -6,17 +6,12 @@
   "main": "index.js",
   "scripts": {
     "local:start": "nodemon index.js",
-    "production:start":"node index.js",
+    "production:start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Somhrik",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^7.0.4",
-    "node-uuid": "^1.4.8",
     "socket.io": "^4.6.1"
   },
   "devDependencies": {
